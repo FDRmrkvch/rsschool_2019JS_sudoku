@@ -1,16 +1,16 @@
 module.exports = function solveSudoku(matrix){
   
-  var matrixDone = matrix;
+var matrixDone = matrix;
   if(solved(matrix)){
     matrixDone = matrix;
   }
-  return matrixDone;
+return matrixDone;
 
-  function solved(matrix){
-    var cell = [];
-    if(!fij(matrix, cell)){
-      return true;
-    }
+function solved(matrix){
+  var cell = [];
+  if(!fij(matrix, cell)){
+    return true;
+}
 
 var row = cell[0];
 var col = cell[1];
@@ -55,18 +55,17 @@ function rowChecked(matrix, row, num){
         return true;
       }
     }
-    return false;
-  }
-
-  function check(matrix, row, col, num){
-    for(var i = 0; i < 3; i++){
-      for(var j = 0; j < 3; j++){
-        if(matrix[i + row][j + col] == num){
-        return true;
-      }
-    }
+  return false;
 }
-  
-return false;
+
+function check(matrix, row, col, num){
+  for(var i = 0; i < 3; i++){
+    for(var j = 0; j < 3; j++){
+      if(matrix[i + row][j + col] == num){
+        return true;
+        }
+      }
+    }  
+  return false;
 }
 }
