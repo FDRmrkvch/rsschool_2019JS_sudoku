@@ -21,7 +21,7 @@ for(var num = 1; num < 10; num++){
       if(solved(matrix)){
         return true;
       }
-     matrix[row][col] = 0;
+      matrix[row][col] = 0;
   }
 }
 return false;
